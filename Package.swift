@@ -2,9 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "RMQClient",
+    name: "rabbitmq-objc-client",
     platforms: [.iOS(.v12), .macOS(.v10_13)],
-    products: [.library(name: "RMQClient", targets: ["RMQClient"])],
+    products: [
+        .library(
+            name: "RMQClient", 
+            targets: ["RMQClient"]
+        )
+    ],
     dependencies: [
         .package(url: "https://github.com/robbiehanson/CocoaAsyncSocket.git", from: "7.6.5"),
         .package(url: "https://github.com/naswadani/JKVValue.git", branch: "spm-support")
@@ -19,12 +24,14 @@ let package = Package(
             path: "RMQClient",
             publicHeadersPath: "include", 
             cSettings: [
-                .headerSearchPath(".")
+                .headerSearchPath("."),
+                .headerSearchPath("../JKVValue/JKVValue/include")
             ],
             linkerSettings: [
                 .linkedFramework("Security"),
                 .linkedFramework("CFNetwork")
             ]
         )
-    ]
+    ],
+    cLanguageStandard: .c11
 )
