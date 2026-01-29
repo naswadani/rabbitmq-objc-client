@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -186,7 +186,6 @@
 		AEE445E81C7342EE0082132C /* RMQReaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE445E71C7342EE0082132C /* RMQReaderTest.swift */; };
 		AEE445EB1C7373BF0082132C /* RMQBasicProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE445E91C7373BF0082132C /* RMQBasicProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE445EC1C7373BF0082132C /* RMQBasicProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE445EA1C7373BF0082132C /* RMQBasicProperties.m */; };
-		AEE7FE951C3BCA6000DF8C4F /* RMQClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE7FE941C3BCA6000DF8C4F /* RMQClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE7FE9C1C3BCA6000DF8C4F /* RMQClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE7FE911C3BCA6000DF8C4F /* RMQClient.framework */; };
 		AEE7FEAD1C3BCD0F00DF8C4F /* RMQConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE7FEAB1C3BCD0F00DF8C4F /* RMQConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE7FEAE1C3BCD0F00DF8C4F /* RMQConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE7FEAC1C3BCD0F00DF8C4F /* RMQConnection.m */; };
@@ -420,7 +419,6 @@
 		AEE445E91C7373BF0082132C /* RMQBasicProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMQBasicProperties.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		AEE445EA1C7373BF0082132C /* RMQBasicProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMQBasicProperties.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		AEE7FE911C3BCA6000DF8C4F /* RMQClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMQClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEE7FE941C3BCA6000DF8C4F /* RMQClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMQClient.h; sourceTree = "<group>"; };
 		AEE7FE961C3BCA6000DF8C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE7FE9B1C3BCA6000DF8C4F /* RMQClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMQClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE7FEA21C3BCA6000DF8C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -463,6 +461,23 @@
 		DCF6E18E4458BA531912F592 /* Pods-RMQClient.test without tls.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClient.test without tls.xcconfig"; path = "Target Support Files/Pods-RMQClient/Pods-RMQClient.test without tls.xcconfig"; sourceTree = "<group>"; };
 		E1B1A14D8293E470029B3CCB /* Pods-RMQClient-RMQClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClient-RMQClientTests.debug.xcconfig"; path = "Target Support Files/Pods-RMQClient-RMQClientTests/Pods-RMQClient-RMQClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1F5417712F2B3A3200B7C810 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				include/RMQClient.h,
+			);
+			publicHeaders = (
+				include/RMQClient.h,
+			);
+			target = AEE7FE901C3BCA6000DF8C4F /* RMQClient */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1F5417702F2B3A1F00B7C810 /* RMQClient */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1F5417712F2B3A3200B7C810 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = RMQClient; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4DF6E43327F6E90700C43208 /* Frameworks */ = {
@@ -870,8 +885,8 @@
 		AEE7FE931C3BCA6000DF8C4F /* RMQClient */ = {
 			isa = PBXGroup;
 			children = (
+				1F5417702F2B3A1F00B7C810 /* RMQClient */,
 				AEE7FE961C3BCA6000DF8C4F /* Info.plist */,
-				AEE7FE941C3BCA6000DF8C4F /* RMQClient.h */,
 				AEA8A7751CCA103700371E38 /* Connection */,
 				AE34153E1CEB73C90071177A /* Recovery */,
 				AEDBFF271CD8E36F0004DB67 /* TLS */,
@@ -1034,7 +1049,6 @@
 				AE4B72FB1D17F9E000907667 /* RMQBasicProperties+MergeDefaults.h in Headers */,
 				AED74B4C1D22AF2400EE9550 /* RMQMethods+Convenience.h in Headers */,
 				AE338D7E1CF5F0CF005D8D6C /* RMQTable.h in Headers */,
-				AEE7FE951C3BCA6000DF8C4F /* RMQClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1309,9 +1323,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RMQClient-RMQClientIntegrationTests/Pods-RMQClient-RMQClientIntegrationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RMQClient-RMQClientIntegrationTests/Pods-RMQClient-RMQClientIntegrationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1348,9 +1366,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RMQClient-RMQClientTests/Pods-RMQClient-RMQClientTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RMQClient-RMQClientTests/Pods-RMQClient-RMQClientTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1555,7 +1577,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1598,7 +1619,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1638,7 +1658,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1678,7 +1697,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1732,7 +1750,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
@@ -1819,7 +1836,6 @@
 			baseConfigurationReference = 3C69411D0F6F665CDF6E5375 /* Pods-RMQClient-RMQClientTests.test without tls.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-
 				INFOPLIST_FILE = RMQClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1883,7 +1899,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
@@ -1970,7 +1985,6 @@
 			baseConfigurationReference = 4C2909C30EF5F43A6592AE3F /* Pods-RMQClient-RMQClientTests.test with tls.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-
 				INFOPLIST_FILE = RMQClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2078,7 +2092,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
@@ -2152,7 +2165,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
@@ -2267,7 +2279,6 @@
 			baseConfigurationReference = E1B1A14D8293E470029B3CCB /* Pods-RMQClient-RMQClientTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-
 				INFOPLIST_FILE = RMQClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2289,7 +2300,6 @@
 			baseConfigurationReference = 59484ED96BF0E2FE553AB9AA /* Pods-RMQClient-RMQClientTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-
 				DEVELOPMENT_TEAM = FLJTZE77QC;
 				INFOPLIST_FILE = RMQClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
