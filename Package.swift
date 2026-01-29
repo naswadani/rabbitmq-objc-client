@@ -24,8 +24,7 @@ let package = Package(
             path: "RMQClient",
             publicHeadersPath: "include", 
             cSettings: [
-                .headerSearchPath("."),
-                .headerSearchPath("../JKVValue/JKVValue/include")
+                .headerSearchPath(".")
             ],
             linkerSettings: [
                 .linkedFramework("Security"),
