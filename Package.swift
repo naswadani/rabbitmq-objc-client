@@ -14,23 +14,31 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/robbiehanson/CocoaAsyncSocket.git", from: "7.6.5"),
-        .package(url: "https://github.com/naswadani/JKVValue.git", .branch("spm-support")),
+        .package(
+            url: "https://github.com/robbiehanson/CocoaAsyncSocket.git",
+            from: "7.6.5"
+        ),
+        .package(
+            url: "https://github.com/naswadani/JKVValue.git",
+            branch: "spm-support"
+        )
     ],
     targets: [
         .target(
             name: "RMQClient",
             dependencies: [
-                "CocoaAsyncSocket",
-                "JKVValue",
+                .product(
+                    name: "CocoaAsyncSocket",
+                    package: "CocoaAsyncSocket"
+                ),
+                .product(
+                    name: "JKVValue",
+                    package: "JKVValue"
+                )
             ],
             path: "RMQClient",
-            publicHeadersPath: ".", 
-            cSettings: [
-                .headerSearchPath("."),
-            ],
+            publicHeadersPath: ".",
             linkerSettings: [
-                .linkedFramework("Foundation"),
                 .linkedFramework("Security"),
                 .linkedFramework("CFNetwork")
             ]
