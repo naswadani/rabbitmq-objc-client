@@ -242,6 +242,7 @@
 /* Begin PBXFileReference section */
 		1029A0E12087A97E00C72924 /* ConnectionDeadlockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDeadlockTests.swift; sourceTree = "<group>"; };
 		1272C30BB553E405D6F83233 /* Pods_RMQClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMQClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5417762F2B3EE500B7C810 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		3C69411D0F6F665CDF6E5375 /* Pods-RMQClient-RMQClientTests.test without tls.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClient-RMQClientTests.test without tls.xcconfig"; path = "Target Support Files/Pods-RMQClient-RMQClientTests/Pods-RMQClient-RMQClientTests.test without tls.xcconfig"; sourceTree = "<group>"; };
 		4940838A62CE8238363038E6 /* Pods-RMQClient-RMQClientIntegrationTests.test with tls.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClient-RMQClientIntegrationTests.test with tls.xcconfig"; path = "Target Support Files/Pods-RMQClient-RMQClientIntegrationTests/Pods-RMQClient-RMQClientIntegrationTests.test with tls.xcconfig"; sourceTree = "<group>"; };
 		4C2909C30EF5F43A6592AE3F /* Pods-RMQClient-RMQClientTests.test with tls.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMQClient-RMQClientTests.test with tls.xcconfig"; path = "Target Support Files/Pods-RMQClient-RMQClientTests/Pods-RMQClient-RMQClientTests.test with tls.xcconfig"; sourceTree = "<group>"; };
@@ -868,6 +869,7 @@
 				AEE7FE921C3BCA6000DF8C4F /* Products */,
 				4DF6E46C27F6E98100C43208 /* Frameworks */,
 				664FDD841ED40E8D749CE347 /* Pods */,
+				1F5417762F2B3EE500B7C810 /* Package.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1153,6 +1155,7 @@
 					};
 					AEE7FE901C3BCA6000DF8C4F = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 2620;
 					};
 					AEE7FE9A1C3BCA6000DF8C4F = {
 						CreatedOnToolsVersion = 7.0;
@@ -1803,6 +1806,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCF6E18E4458BA531912F592 /* Pods-RMQClient.test without tls.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -1828,6 +1832,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = "Test without TLS";
 		};
@@ -1952,6 +1958,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9435D72A7BED15B7E766234C /* Pods-RMQClient.test with tls.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -1977,6 +1984,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = "Test with TLS";
 		};
@@ -2214,6 +2223,7 @@
 			baseConfigurationReference = BE106609B7FFA43EFD87FF66 /* Pods-RMQClient.debug.xcconfig */;
 			buildSettings = {
 				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -2239,6 +2249,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -2246,6 +2258,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8826AB98575F2D497E0DA627 /* Pods-RMQClient.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -2271,6 +2284,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};

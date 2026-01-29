@@ -6,7 +6,7 @@ let package = Package(
     platforms: [.iOS(.v12), .macOS(.v10_13)],
     products: [
         .library(
-            name: "RMQClient", 
+            name: "RMQClient",
             targets: ["RMQClient"]
         )
     ],
@@ -22,7 +22,7 @@ let package = Package(
                 .product(name: "JKVValue", package: "JKVValue")
             ],
             path: "RMQClient",
-            publicHeadersPath: "include", 
+            publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath(".")
             ],
