@@ -27,17 +27,15 @@ let package = Package(
         .target(
             name: "RMQClient",
             dependencies: [
-                .product(
-                    name: "CocoaAsyncSocket",
-                    package: "CocoaAsyncSocket"
-                ),
-                .product(
-                    name: "JKVValue",
-                    package: "JKVValue"
-                )
+                .product(name: "CocoaAsyncSocket", package: "CocoaAsyncSocket"),
+                .product(name: "JKVValue", package: "JKVValue")
             ],
             path: "RMQClient",
-            publicHeadersPath: ".",
+            publicHeadersPath: ".", 
+            cSettings: [
+                .headerSearchPath("."),
+                .define("NS_BLOCK_ASSERTIONS", to: "1")
+            ],
             linkerSettings: [
                 .linkedFramework("Security"),
                 .linkedFramework("CFNetwork")
