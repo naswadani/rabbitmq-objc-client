@@ -3,25 +3,13 @@ import PackageDescription
 
 let package = Package(
     name: "RMQClient",
-    platforms: [
-        .iOS(.v12),
-        .macOS(.v10_13)
-    ],
+    platforms: [.iOS(.v12), .macOS(.v10_13)],
     products: [
-        .library(
-            name: "RMQClient",
-            targets: ["RMQClient"]
-        )
+        .library(name: "RMQClient", targets: ["RMQClient"])
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/robbiehanson/CocoaAsyncSocket.git",
-            from: "7.6.5"
-        ),
-        .package(
-            url: "https://github.com/naswadani/JKVValue.git",
-            branch: "spm-support"
-        )
+        .package(url: "https://github.com/robbiehanson/CocoaAsyncSocket.git", from: "7.6.5"),
+        .package(url: "https://github.com/naswadani/JKVValue.git", branch: "spm-support") 
     ],
     targets: [
         .target(
@@ -31,21 +19,14 @@ let package = Package(
                 .product(name: "JKVValue", package: "JKVValue")
             ],
             path: "RMQClient",
-            publicHeadersPath: ".", 
+            publicHeadersPath: ".",
             cSettings: [
-                .headerSearchPath("."),
-                .define("NS_BLOCK_ASSERTIONS", to: "1")
+                .headerSearchPath(".")
             ],
             linkerSettings: [
                 .linkedFramework("Security"),
                 .linkedFramework("CFNetwork")
             ]
-        ),
-        .testTarget(
-            name: "RMQClientTests",
-            dependencies: ["RMQClient"],
-            path: "RMQClientTests"
         )
-    ],
-    cLanguageStandard: .c11
+    ]
 )
